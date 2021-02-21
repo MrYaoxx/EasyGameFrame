@@ -1,4 +1,4 @@
-# MyGameFrame
+# EasyGameFrame
 
 游戏窗口引擎
 
