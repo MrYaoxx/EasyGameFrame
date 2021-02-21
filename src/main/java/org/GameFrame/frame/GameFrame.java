@@ -39,9 +39,6 @@ public class GameFrame extends JFrame {
 
         // 设置是否显示边框
         setUndecorated(info.undecorated);
-
-        // 设置是否可见
-        setVisible(info.visible);
     }
 
     /**

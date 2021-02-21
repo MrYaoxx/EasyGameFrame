@@ -6,9 +6,12 @@
 ## 代码示例
 
 + #### 创建窗口
+
 ~~~java
 GameFrame frame = new GameFrame(new FrameInfo("Test", new Dimension(100, 100), new Point(0, 0), JFrame.EXIT_ON_CLOSE, false, true));
 ~~~
+
+> 窗口默认为不显示, 使用 `frame.setVisible(true` 显示窗口
 
 |参数|解释|
 |:---:|:---:|

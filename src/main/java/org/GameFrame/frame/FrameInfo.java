@@ -42,11 +42,6 @@ public class FrameInfo {
      */
     public boolean undecorated;
 
-    /**
-     * 是否可见
-     */
-    public boolean visible;
-
 
     /**
      * 构造窗口信息
@@ -57,15 +52,13 @@ public class FrameInfo {
      * @param point          坐标
      * @param closeOperation 窗口关闭时的操作
      * @param undecorated    是否隐藏边框
-     * @param visible        窗口是否可见
      */
-    public FrameInfo(String title, BufferedImage icon, Dimension size, Point point, int closeOperation, boolean undecorated, boolean visible) {
+    public FrameInfo(String title, BufferedImage icon, Dimension size, Point point, int closeOperation, boolean undecorated) {
         this.title = title;
         this.icon = icon;
         this.size = size;
         this.point = point;
         this.closeOperation = closeOperation;
         this.undecorated = undecorated;
-        this.visible = visible;
     }
 }

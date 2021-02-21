@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 
 public class Main {
     public static void main(String[] args) {
-        GameFrame frame = new GameFrame(new FrameInfo("Test", null, new Dimension(200, 200), null, JFrame.EXIT_ON_CLOSE, false, true));
+        GameFrame frame = new GameFrame(new FrameInfo("Test", null, new Dimension(200, 200), null, JFrame.EXIT_ON_CLOSE, true));
 
         int id = frame.addMouseDragWindowAdapter(new Point(), frame.getSize());
 
@@ -20,5 +20,7 @@ public class Main {
                 frame.removeMouseDragWindowAdapter(id);
             }
         });
+
+        frame.setVisible(true);
     }
 }
