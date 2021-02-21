@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 游戏窗口类
@@ -12,9 +14,18 @@ import java.awt.event.MouseEvent;
  */
 
 public class GameFrame extends JFrame {
+    /**
+     * 鼠标拖拽窗口的监听器
+     */
+    public List<MouseAdapter> mouseDragWindowAdapter = new ArrayList<>();
+
+
     public GameFrame(FrameInfo info) {
         // 设置窗口标题
         setTitle(info.title);
+
+        //  设置窗口图标
+        setIconImage(info.icon);
 
         // 设置窗口尺寸
         setSize(info.size);
@@ -83,19 +94,39 @@ public class GameFrame extends JFrame {
     /**
      * 添加鼠标在某区域内拖动窗口
      *
-     * @param adapter 监听器
+     * @param p 区域左上角起点
+     * @param d 区域尺寸
+     * @return 监听器
      */
-    public void addMouseDragWindowAdapter(MouseAdapter adapter) {
+    public int addMouseDragWindowAdapter(Point p, Dimension d) {
+        MouseAdapter adapter = getMouseDragWindowAdapter(p, d);
+        mouseDragWindowAdapter.add(adapter);
         addMouseListener(adapter);
         addMouseMotionListener(adapter);
+        return mouseDragWindowAdapter.size() - 1;
+    }
+
+    /**
+     * 添加鼠标在某区域内拖动窗口
+     *
+     * @param adapter 监听器
+     * @return id
+     */
+    public int addMouseDragWindowAdapter(MouseAdapter adapter) {
+        mouseDragWindowAdapter.add(adapter);
+        addMouseListener(adapter);
+        addMouseMotionListener(adapter);
+        return mouseDragWindowAdapter.size() - 1;
     }
 
     /**
      * 删除鼠标在某区域内拖动窗口
      *
-     * @param adapter 监听器
+     * @param id 删除的监听器id
      */
-    public void removeMouseDragWindowAdapter(MouseAdapter adapter) {
+    public void removeMouseDragWindowAdapter(int id) {
+        MouseAdapter adapter = mouseDragWindowAdapter.get(id);
+        mouseDragWindowAdapter.set(id, null);
         removeMouseListener(adapter);
         removeMouseMotionListener(adapter);
     }

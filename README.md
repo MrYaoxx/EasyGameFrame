@@ -20,33 +20,29 @@ GameFrame frame = new GameFrame(new FrameInfo("Test", new Dimension(100, 100), n
 |visible _[true]_|是否显示窗口|
 
 
-+ #### 鼠标拖动窗口
++ #### 鼠标拖动窗口 
+> *2.x* 版本代码示例
 
 ~~~java
-MouseAdapter adapter = frame.getMouseDragWindowAdapter(new Point(0, 0), new Dimension(100, 100));
-
 // 添加监听器
-frame.addMouseDragWindowAdapter(adapter);
-
-// 移除监听器
-frame.removeMouseMotionListener(adapter);
+int id = frame.addMouseDragWindowAdapter(new Point(0, 0), frame.geiSize());
 ~~~
 
 |参数|解释|
 |:---:|:---:|
 |p _[Point(0, 0)]_|鼠标拖动范围的左上角坐标|
 |d _[Dimension(100, 100)]_|鼠标拖动范围的尺寸|
+|return|监听器编号,用于删除监听器|
 
+~~~java
+// 移除监听器
+frame.removeMouseMotionListener(id);
+~~~
 
+|参数|解释|
+|:---:|:---:|
+|id|要删除的监听器的编号|
 
-## 更新日志
-
-+ ##### 1.1
-    - 新增函数 _GameFrame.getPointByPercent_ : 用百分比获取坐标
-    - 新增函数 _GameFrame.getDimensionByPercent_ : 用百分比获取尺寸
-    
-+ ##### 1.2
-    - 修改 _FrameInfo.dimension_ 为 _FrameInfo.size_
 
 
 ## 信息
