@@ -1,5 +1,5 @@
-import org.GameFrame.frame.FrameInfo;
-import org.GameFrame.frame.GameFrame;
+import io.github.mryaoxx.EasyGameFrame.frame.FrameInfo;
+import io.github.mryaoxx.EasyGameFrame.frame.GameFrame;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package org.GameFrame.frame;
+package io.github.mryaoxx.EasyGameFrame.frame;
 
 import javax.swing.*;
 import java.awt.*;

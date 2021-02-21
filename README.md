@@ -11,7 +11,7 @@
 GameFrame frame = new GameFrame(new FrameInfo("Test", new Dimension(100, 100), new Point(0, 0), JFrame.EXIT_ON_CLOSE, false, true));
 ~~~
 
-> 窗口默认为不显示, 使用 `frame.setVisible(true` 显示窗口
+> 窗口默认为不显示, 使用 `frame.setVisible(true)` 显示窗口
 
 |参数|解释|
 |:---:|:---:|
@@ -24,7 +24,6 @@ GameFrame frame = new GameFrame(new FrameInfo("Test", new Dimension(100, 100), n
 
 
 + #### 鼠标拖动窗口 
-> *2.x* 版本代码示例
 
 ~~~java
 // 添加监听器

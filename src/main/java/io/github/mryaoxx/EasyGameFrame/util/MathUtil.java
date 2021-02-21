@@ -1,4 +1,4 @@
-package org.GameFrame.util;
+package io.github.mryaoxx.EasyGameFrame.util;
 
 /**
  * 数学工具类

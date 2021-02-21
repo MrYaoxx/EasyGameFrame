@@ -1,4 +1,4 @@
-package org.GameFrame.frame;
+package io.github.mryaoxx.EasyGameFrame.frame;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

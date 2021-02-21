@@ -1,4 +1,4 @@
-package org.GameFrame.util;
+package io.github.mryaoxx.EasyGameFrame.util;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

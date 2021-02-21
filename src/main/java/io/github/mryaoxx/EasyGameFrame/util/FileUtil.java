@@ -1,4 +1,4 @@
-package org.GameFrame.util;
+package io.github.mryaoxx.EasyGameFrame.util;
 
 /**
  * 文件处理类
